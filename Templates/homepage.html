@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <title>Home Page</title>
+    <style>
+        
+    .background-image-container{
+        position:relative;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position:top;padding:12% 0
+    }
+    
+    .footer {
+        position: relative;
+        margin-top: 45px;
+        padding-top: 90px;
+        background: rgba(0, 0, 0, .04);
+    }
+
+    .footer .footer-contact,
+    .footer .footer-link,
+    .footer .footer-newsletter {
+        position: relative;
+        margin-bottom: 45px;
+        color: #090c09;
+    }
+
+    .footer .footer-contact h2,
+    .footer .footer-link h2,
+    .footer .footer-newsletter h2 {
+        position: relative;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        font-size: 22px;
+        font-weight: 700;
+        color: #70b507;
+    }
+
+    .footer .footer-contact h2::after,
+    .footer .footer-link h2::after,
+    .footer .footer-newsletter h2::after {
+        position: absolute;
+        content: "";
+        width: 45px;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: #709a05;
+    }
+
+    .footer .footer-link a {
+        display: block;
+        margin-bottom: 10px;
+        color: #454545;
+        transition: .3s;
+    }
+
+    .footer .footer-link a::before {
+        position: relative;
+        content: "\f105";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-right: 10px;
+        color: #1bce08;
+    }
+
+    .footer .footer-link a:hover {
+        color: #08cd29;
+        letter-spacing: 1px;
+    }
+
+    .footer .footer-contact p i {
+        width: 25px;
+        color: #32fb7c;
+    }
+
+    .footer .footer-social {
+        position: relative;
+        margin-top: 20px;
+        display: flex;
+    }
+
+
+    .footer .footer-social a:hover {
+        background: #84b509;
+    }
+
+    .footer .footer-social a:last-child {
+        margin: 0;
+    }
+
+    .footer .footer-newsletter .form {
+        position: relative;
+        width: 100%;
+    }
+
+    .footer .footer-newsletter input {
+        height: 60px;
+        background: transparent;
+        border: 1px solid #0b9c3e;
+        border-radius: 5px;
+    }
+
+    .footer .footer-newsletter .btn {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        height: 44px;
+        padding: 8px 20px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .footer .copyright {
+        position: relative;
+        width: 100%;
+        padding: 30px 0;
+        text-align: center;
+        background: #ffffff;
+    }
+
+    .footer .copyright p {
+        margin: 0;
+        display: inline-block;
+        color: #090d0d;
+    }
+
+    .footer .copyright p a {
+        color: #0bc123;
+    }
+
+    .footer .copyright p a:hover {
+        color: #09d20f;
+    }
+
+    #category{
+        display: flex;
+        flex-direction: column;
+        max-width: 1000px;
+        margin: 30px auto;
+    }
+    .category-heading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .category-heading h2{
+        font-size: 2rem;
+        font-weight: 700;
+        color: black ;
+        letter-spacing: 0.5px;
+    }
+    .category-heading span{
+        color: white;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+
+    .category-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .category-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 20px;
+        min-height: 130px;
+        width: 120px;
+        border: 10px solid rgba(0,0,0,0.03);  
+
+    }
+    .category-box span{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: black;
+        font-size: 1rem;
+        margin-top: 10px;
+        letter-spacing: 0.3px;
+        font-weight: 600;
+
+    }
+    .category-box button{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: black;
+        font-size: 1rem;
+        margin-top: 10px;
+        letter-spacing: 0.3px;
+        font-weight: 600;
+
+    }
+    </style>
+</head>
+<body>
+    <!--header start-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/" style="font-weight: 500;">FarmEasy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarText" style="font-weight: 500;">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/userlogin">Login</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/productdisplay">Products</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/usersignup">Signup</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/cart">Cart</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/adminlogin">Admin</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+
+    <div class="white-text-container background-image-container" style="background-image: url(https://www.mercatus.com/wp-content/uploads/2021/08/non-descript-delivery.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 style="margin-left: 1cm;" >FarmEasy : Just Click It</h1>
+                    <p style="text-align:left; font-size: large; color: #000;">Bring the store to your door!</p>
+                     <a href="" title="" class=" "> </a>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <br>
+    
+    <section id = "category">
+        <div class="category-heading">
+            <h2>Category</h2>
+            <span>All</span>
+        </div>
+
+        <div class="category-container">
+            <a href="/display-snacks" class="category-box">
+                <span>Snacks</span>
+            </a>
+            <a href="/display-beverages" class="category-box">
+                <span>Beverages</span>
+            </a>
+            <a href="/display-bakery" class="category-box">
+                <span>Bakery</span>
+            </a>
+            <a href="/display-fruits" class="category-box">
+                <span>Fruits</span>
+            </a>
+            <a href="/display-vegetables" class="category-box">
+                <span>Vegetables</span>
+            </a>
+            <a href="/display-nonveg" class="category-box">
+                <span>Non-Veg</span>
+            </a>
+        </div>
+
+        <div class="category-heading">
+            <h2 style="margin-top: 1.5cm;">Our Products</h2>
+        </div>
+
+        <div class="category-container">
+            <a href="/productdisplay" class="category-box">
+                <button class="btn btn-light" style="background-color: white;" name="viewall">Viewall</button> 
+            </a>
+        </div>
+
+    </section>
+
+ <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="footer-contact">
+                            <h2>About Us</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>FarmEasy is India’s fastest online grocery delivery platform.Get fresh groceries and much more delivered online instantly. Single app for all your daily needs. Order thousands of products at just a tap </p>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-link">
+                            <h2>Quick Links</h2>
+                            <a href="">Terms of use</a>
+                            <a href="">Privacy policy</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="footer-newsletter">
+                    <h2>Newsletter</h2>
+                    <p>
+                        Subscribe for more exciting offers.
+                    </p>
+                    <div class="form">
+                        <input class="form-control" placeholder=" ">
+                        <button class="btn custom-btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <p>Copyright &copy; <a href="#">FarmEasy.com</a>, All Right Reserved.</p>
+            <p>Designed By <a href="https://www.instagram.com">FarmEasy.com</a></p>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
